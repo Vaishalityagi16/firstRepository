@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="LifeCycleHooksExample">
+       I am in parent component <br/>
+       <lightning-button variant="brand" slot="actions" label="Show/Hide" onclick={handleShowHide} class="slds-m-left_x-small"></lightning-button>
+        <template if:true={show}>
+     <c-call-child></c-call-child>
+     </template>
+    </lightning-card>
+    <lightning-button variant="destructive" label="Show Error" onclick={showErrorToast} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="success"  label="Show Success" onclick={showSuccessToast} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="destructive-text"  label="Show Warning" onclick={showWarningToast} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand"  label="Show Info" onclick={showInfoToast} class="slds-m-left_x-small"></lightning-button>
+
+</template>

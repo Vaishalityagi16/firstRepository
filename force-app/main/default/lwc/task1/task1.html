@@ -1,0 +1,13 @@
+<template>   
+<lightning-input type="text" name="Name" label="Search" onchange={handleClick1}  ></lightning-input><br/>
+<lightning-button variant="brand" label={ButtonN} title="Looks like a link" onclick={handleClick2}  class="slds-m-left_x-small"></lightning-button>&nbsp;
+<lightning-button variant="success" label="Clear" title="Successful action" onclick={handleClick3} class="slds-m-left_x-small"></lightning-button>&nbsp;
+<lightning-button variant="destructive" label="Delete" title="Destructive action" onclick={handleClick4} class="slds-m-left_x-small"></lightning-button>
+<lightning-datatable
+    key-field="id"
+    data={data}
+    onrowaction ={handleRowAction}
+    onrowselection={getSelectedRecords}
+    columns={columns}>
+</lightning-datatable>
+</template>

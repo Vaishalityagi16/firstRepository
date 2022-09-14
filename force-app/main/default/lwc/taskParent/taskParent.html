@@ -1,0 +1,12 @@
+<template>
+<div class="slds-grid slds-gutters">
+    <div class="slds-col">
+        <lightning-input type="text" name="Name" label="Enter Text" onchange={OnClick} value={text} ></lightning-input>
+</div>
+<div class="slds-col slds-m-around_large">
+<lightning-button variant="brand" label="Save" title="Looks like a link" onclick={handleClick1} value={list} ></lightning-button>
+    </div>
+    </div>
+    Message---> {displayText}
+    <c-task-Child list={list} ontaskchild={handleText}> </c-task-Child>
+</template>

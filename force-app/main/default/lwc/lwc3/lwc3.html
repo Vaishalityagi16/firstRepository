@@ -1,0 +1,12 @@
+<template>
+    <lightning-combobox
+    name="OpportunityList"
+    label="Opportunity Name"
+    value={value}
+    placeholder="Select Progress"
+    options={Option}
+    onchange={handleClick} ></lightning-combobox>
+    <lightning-input type="date" name="CloseDate" label="Close Date" onchange={UpdateD} value={d}></lightning-input>
+    <lightning-button variant="base" label="Update" title="Looks like a link" onclick={Click} ></lightning-button>
+
+</template>

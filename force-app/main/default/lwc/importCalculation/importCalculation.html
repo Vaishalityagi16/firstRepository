@@ -1,0 +1,15 @@
+<template>
+   <lightning-card title="ForCalculation">
+    <div class="slds-p-horizontal_medium">
+    <lightning-input required label="Input1" name="input1" value={input1} onchange={Input1handleclick} placeholder="Enter value.." ></lightning-input>
+    
+    <lightning-input required label="Input2" name="input2" value={input2} onchange={input2handleclick} placeholder="Enter value.." ></lightning-input></div>
+
+    <div class="slds-p-top_large">
+    <lightning-button variant="brand" value="Add" label="Add" onclick={handleClick1} ></lightning-button> &nbsp;
+    <lightning-button variant="brand" value="Subtract" label="Subtract" onclick={handleClick1} ></lightning-button> &nbsp;
+    <lightning-button variant="brand" value="Divide" label="Divide" onclick={handleClick1} ></lightning-button> &nbsp;
+    <lightning-button variant="brand" value="Multiply" label="Multiply" onclick={handleClick1} ></lightning-button>
+</div>
+</lightning-card> 
+</template>

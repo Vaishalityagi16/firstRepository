@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Region</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Region</shortDescription>
+        <value>Winter</value>
+    </labels>
+    <labels>
+        <fullName>showErrorToast</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>showErrorToast</shortDescription>
+        <value>Some unexpected error</value>
+    </labels>
+    <labels>
+        <fullName>showInfoToast</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>showInfoToast</shortDescription>
+        <value>Operation will run in background</value>
+    </labels>
+    <labels>
+        <fullName>showSuccessToast</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>showSuccessToast</shortDescription>
+        <value>Operation successful</value>
+    </labels>
+    <labels>
+        <fullName>showWarningToast</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>showWarningToast</shortDescription>
+        <value>Some problem</value>
+    </labels>
+    <labels>
+        <fullName>toastCustomLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>toastCustomLabel</shortDescription>
+        <value>You are an intelligent developer..</value>
+    </labels>
+</CustomLabels>

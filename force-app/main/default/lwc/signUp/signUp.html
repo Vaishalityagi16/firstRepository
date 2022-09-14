@@ -1,0 +1,107 @@
+<template>
+    <template if:true={isModalOpen1}>
+        <section aria-modal="true"  class="slds-modal slds-fade-in-open ">
+           
+            <div class="slds-modal__container width:30%" >
+        <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={OnhandleClick5}></lightning-icon>
+
+    <div class="slds-size_large slds-align_absolute-center" style="margin-top:20px;">
+    <lightning-card  title="SignUp Page">
+        <div >
+            <lightning-input  required style="margin-left:10px; margin-right:30px" class="validate" type="text"  name="Name" label="UserInfoName" value={ob.Name} pattern="^([A-Z][A-Za-z]*)([A-Za-z ]*)[A-Za-z]$" message-when-pattern-mismatch=" Pattern Mismatched" placeholder="type here.." onchange={handleCilck20}  ></lightning-input>
+        </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col " >
+            <lightning-input required  style="margin-left:10px;" class="validate" type="text"  name="Name" label="FirstName" value={ob.FirstName__c} pattern="^[A-Z][A-Za-z]{1,20}$" message-when-pattern-mismatch=" Pattern Mismatched" placeholder="type here.." onchange={handleCilck1}  ></lightning-input>
+        </div>
+        <div class="slds-col">
+            <lightning-input  style="margin-right:10px;" class="validate" pattern="^[A-Z][A-Za-z]{1,20}$" message-when-pattern-mismatch="Pattern mismatched.." type="text" name="Name" label="MiddleName" value={ob.MiddleName__c} onchange={handleClick2} placeholder="type here.." ></lightning-input>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col" >
+            <lightning-input required style="margin-left:10px;" class="validate" pattern="^[A-Z][A-Za-z]{1,20}$" message-when-pattern-mismatch="Pattern mismatched.." type="text" name="Name" label="LastName" value={ob.LastName__c} onchange={handleClick3} placeholder="type here.." ></lightning-input>
+        </div> 
+        <div class="slds-col">
+            <lightning-input required  style="margin-right:10px;" type="date" name="Name" value={ob.DOB__c} label="Dob" class="validate" pattern="^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$" message-when-pattern-mismatch="Pattern mismatched" placeholder="Select here.." onchange={handleClick4}  ></lightning-input>
+        </div>  
+    </div>
+    <div slot ="footer">
+        <lightning-button variant="brand" label="Cancel" onclick={OnhandleClick5}></lightning-button>&nbsp;&nbsp;
+        <lightning-button variant="brand" label="Next" onclick={handleClick6}></lightning-button>
+    </div>
+    </lightning-card>
+    </div>
+            </div>
+        </section>
+</template>
+
+    <template if:true={isModalOpen}>
+        
+        <section aria-modal="true"  class="slds-modal slds-fade-in-open ">
+           <div class="slds-modal__container width:30%" >
+                <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={OnhandleClick5}></lightning-icon>
+                <div class="slds-modal__content ">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-input required  style="margin-left:10px" class="validate" pattern="^([A-Z][A-Za-z]*)([A-Za-z ]*)[A-Za-z]$" message-when-pattern-mismatch="Pattern mismatched.." type="text" name="Name" label="FatherName" value={ob.Father_Name__c} placeholder="type here.." onchange={handleClick7}  ></lightning-input>
+                        </div>
+                           <div class="slds-col">
+                              <lightning-input required  style="margin-right:20px;" class="validate" pattern="^[6-9][0-9]{9,9}$" message-when-pattern-mismatch="Please enter numeric values.." type="text" name="Name" value={ob.Phone__c} label="Phone" placeholder="type here.." onchange={handleClick8}  ></lightning-input>
+                            </div>
+                    </div>
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col">
+                                    <lightning-input required  style="margin-left:10px;" type="text" name="Name" value={ob.HouseNumber__c} label="HouseNo" placeholder="type here.." onchange={handleClick9}></lightning-input>
+                                </div>
+                            <div class="slds-col">
+                                <lightning-input required  style="margin-right:20px;" class="validate" pattern="^([A-Z][A-Za-z]*)([A-Za-z ]*)[A-Za-z]$" message-when-pattern-mismatch="Pattern mismatched" type="text" name="Name" value={ob.CityName__c} label="City" placeholder="type here.." onchange={handleClick10}></lightning-input>
+                            </div>
+                            </div>
+                        <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input required style="margin-bottom:10px; margin-left:10px;" type="text" name="Name" class="validate" pattern="^([A-Z][A-Za-z]*)([A-Za-z ]*)[A-Za-z]$" message-when-pattern-mismatch="Pattern mismatched" value={ob.Country__c} label="Country" placeholder="type here.." onchange={handleClick11}></lightning-input>
+                    </div>
+                    <div class="slds col slds-size_1-of-2">
+                        <lightning-input required style="margin-bottom:10px; margin-right:20px;" class="validate" pattern="^([A-Z][A-Za-z]*)([A-Za-z ]*)[A-Za-z]$" message-when-pattern-mismatch="Pattern mismatched" type="text" name="Name" value={ob.State__c} label="State" placeholder="type here.." onchange={handleClick12}></lightning-input>
+                    </div>
+                </div>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button variant="brand" label="Back" onclick={handleClick13}></lightning-button>&nbsp;
+                <lightning-button variant="brand" label="Next" onclick={handleClick14}></lightning-button>
+            </footer>
+        </div>
+
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+    <template if:true={isModalOpen2}>
+        <section aria-modal="true"  class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container width:30%" >
+                <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={OnhandleClick5}></lightning-icon>
+                <div class="slds-modal__content ">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-input required  style="margin-left:10px; margin-right:20px;" class="validate" pattern="[A-Z][a-z0-9]{7,}$" message-when-pattern-mismatch="Pattern mismatched.." type="text" name="Name" value={ob.UserName__c} label="UserName" placeholder="type here.." onchange={handleClick15}  ></lightning-input>
+                            <lightning-input required  style="margin-left:10px; margin-right:20px;" class="validate" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" message-when-pattern-mismatch="Pattern mismatched.." type="text" name="Name" value={ob.Password__c} label="Password" placeholder="type here.." onchange={handleClic16}  ></lightning-input>
+                            <lightning-input required  style="margin-left:10px; margin-bottom:10px; margin-right:20px;" class="validate" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+.[a-z]{2,}$" message-when-pattern-mismatch="Please enter a valid email" value={ob.Email__c} type="Email" name="Name" label="Email" placeholder="type here.." onchange={handleClick17}  ></lightning-input>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="brand" label="Back" onclick={handleClick18}></lightning-button>&nbsp;
+                    <lightning-button variant="brand" label="Save" onclick={handleClick19}></lightning-button>
+                </footer>
+            </div>
+
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+
+</template>

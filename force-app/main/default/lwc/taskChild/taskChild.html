@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col"> 
+            <lightning-combobox
+            name="progress"
+            label="TextList"
+            value={value}
+            placeholder="Select Progress"
+            options={list}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+        <div class="slds-col"> 
+    <lightning-input type="text" name="Name" label="Enter Text" onchange={OnClick}  ></lightning-input>
+    </div>
+        <div class="slds-col slds-m-around_large"> 
+    <lightning-button variant="brand" label="Save" title="Looks like a link" onclick={handleClick}></lightning-button>
+    </div>
+    </div> 
+        Message--->>> {DisplayText}
+</template>

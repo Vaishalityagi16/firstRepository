@@ -1,0 +1,92 @@
+<template>  
+    <template if:true={LoginModal}>
+<div class="slds-align_absolute-center">
+<lightning-card class = slds-p-around_large  title="LogIn User">
+<div class="slds-align_absolute-center">
+<lightning-input required type="text"  label="UserName" placeholder="Enter your UserName" onchange={handleclick1} ></lightning-input>
+</div>
+<div class="slds-align_absolute-center">
+<lightning-input required   type="text" label="Password" placeholder="Enter your Password" onchange={handleclick2} ></lightning-input>
+</div> <br/>
+<div class="slds-align_absolute-center">
+<lightning-button variant="Success" style="margin-left:10px;" label="LogIn" title="Looks like a link" onclick={handleClick3}></lightning-button>&nbsp;
+<lightning-button variant="brand" style="margin-left:10px;" label="SignUp" title="Looks like a link" onclick={handleClick4}></lightning-button> &nbsp;
+<lightning-button variant="Neutral" style="margin-left:10px; margin-right:20px;" label="Forgot Password" title="Looks like a link" onclick={handleClick5}></lightning-button>
+</div>
+</lightning-card>
+</div>
+</template>
+
+<template if:true={isModalOpen}>
+      <section aria-modal="true" class="slds-modal slds-fade-in-open ">
+ <div class="slds-modal__container " style="width:30%">
+<lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={closeModal}></lightning-icon>
+    <div class="slds-modal__content slds-grid">
+     <div class= " slds-grid slds-wrap" style="margin-bottom: 10px;">
+        <div class="slds-col slds-size_4_of_5" style="margin-right: 25px;margin-left:10px;">
+<lightning-input required type="text" label="UserName" placeholder="Enter your UserName" onchange={handleclick6} ></lightning-input></div>
+             <div class="slds-col slds-size_2_of_5" style="margin-top:24px">
+<lightning-button variant="Success" label="GetOTP" title="Looks like a link" onclick={handleClick7} ></lightning-button>
+            </div>
+     </div>
+   </div>
+     <footer class="slds-modal__footer">
+    <lightning-button variant="brand" label="Cancel" onclick={handleClick8}></lightning-button>
+     </footer>
+    </div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>  
+
+<template if:true={isModalOpen1}>
+    <section aria-modal="true" class="slds-modal slds-fade-in-open ">
+<div class="slds-modal__container " style="width:30%">
+<lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={closeModal}></lightning-icon>
+  <div class="slds-modal__content slds-grid">
+   <div class= " slds-grid slds-wrap" style="margin-bottom: 10px;">
+      <div class="slds-col slds-size_4_of_5" style="margin-right: 25px;margin-left:10px;">
+<lightning-input required type="text" label="Enter Otp" placeholder="Enter verification otp.." onchange={handleclick9} ></lightning-input></div>
+           <div class="slds-col slds-size_2_of_5" style="margin-top:24px">
+<lightning-button variant="Success" label="Verify" title="Looks like a link" onclick={handleClick10} ></lightning-button>
+          </div>
+   </div>
+ </div>
+<footer class="slds-modal__footer">
+    <lightning-button variant="brand" label="Cancel" onclick={handleClick8}></lightning-button>
+     </footer> 
+</div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+
+<template if:true={isModalOpen2}>
+    
+        <section aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" style="width:30%">
+            <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={closeModal}></lightning-icon>
+              <div class="slds-modal__content">
+               <div class= " slds-grid slds-grid_vertical" style="margin-bottom: 10px;">
+                  <div class="slds-col " style="margin:10px;">
+            <lightning-input required type="text" label="New Password" placeholder="Reset new password.." onchange={handleclick11} ></lightning-input></div>
+            <div class="slds-col" style="margin:10px;">
+                <lightning-input required type="text" label="Confirm New Password" placeholder="Confirm your new password" onchange={handleclick12} ></lightning-input>
+            </div>
+                  
+               </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="brand" label="Cancel" onclick={handleClick8}></lightning-button> &nbsp;
+                    <lightning-button variant="brand" label="Save" onclick={handleClick13}></lightning-button>
+
+                </footer>  
+            </div>  
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+    
+</template>
+<template if:true={signupmodel}>
+    <c-sign-up oncall={handlelogin} ></c-sign-up>
+
+</template>
+
+</template>

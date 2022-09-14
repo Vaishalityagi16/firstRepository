@@ -1,0 +1,60 @@
+<template>
+    <template if:true={standardData}>
+<lightning-card title="ForStandardObject" style="width: 1000px">
+<lightning-accordion  allow-multiple-sections-open active-section-name={activeSections}>
+<lightning-accordion-section  label="AccountData" >
+   <!-- <template for:each={data} for:item="item" >
+ <p key={item.Id}>ID:{item.Id}   Name: {item.Name}</p>
+    </template> -->
+    <lightning-datatable
+    key-field="id"
+    data={data}
+    columns={columns}>
+ </lightning-datatable>
+</lightning-accordion-section>
+<lightning-accordion-section label="ContactsData">
+    <lightning-datatable
+    key-field="id"
+    data={con}
+    columns={columns}>
+ </lightning-datatable>
+</lightning-accordion-section>
+
+<lightning-accordion-section label="OpportunityData">
+    <lightning-datatable
+    key-field="id"
+    data={opp}
+    columns={columns}>
+ </lightning-datatable>
+               </lightning-accordion-section>
+                                   </lightning-accordion>
+                                                   </lightning-card>
+                                                </template>
+                               
+                                             
+<template if:true={customData}>
+    <lightning-card title="ForCustomData">
+        <lightning-accordion  allow-multiple-sections-open active-section-name={activeSections}>
+            <lightning-accordion-section  label="FavouriteData" >
+                <lightning-datatable
+                key-field="id"
+                data={fav}
+                columns={columns}>
+             </lightning-datatable>
+            </lightning-accordion-section>
+            <lightning-accordion-section label="TestObjectData">
+                <lightning-datatable
+                key-field="id"
+                data={testData}
+                columns={columns}>
+             </lightning-datatable>
+            </lightning-accordion-section>
+            </lightning-accordion>
+    </lightning-card>
+  </template>                                             
+ 
+ <lightning-button variant="brand" label="Next" onclick={handleClick1} disabled={customData}></lightning-button> &nbsp;
+ <lightning-button variant="brand" label="Previous" onclick={handleClick2} disabled={standardData}></lightning-button>
+
+                                                                                                             
+</template>

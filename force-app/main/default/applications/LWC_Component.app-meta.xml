@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>LWC Component</label>
+    <navType>Standard</navType>
+    <tabs>insertAcc</tabs>
+    <tabs>insertOpportunity</tabs>
+    <tabs>lwc3</tabs>
+    <tabs>lwc4</tabs>
+    <tabs>lwc5</tabs>
+    <tabs>lwc6</tabs>
+    <tabs>lwc8</tabs>
+    <tabs>lwc7</tabs>
+    <tabs>Task1</tabs>
+    <tabs>UserInformation__c</tabs>
+    <tabs>Student__c</tabs>
+    <tabs>CompaniesProduct__c</tabs>
+    <tabs>TestBusinessApplication__c</tabs>
+    <tabs>Staffing__c</tabs>
+    <tabs>Offering__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>LWC_Component_UtilityBar</utilityBar>
+</CustomApplication>

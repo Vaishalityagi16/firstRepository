@@ -1,0 +1,16 @@
+<template>
+    <lightning-combobox
+    name="Records"
+    label="Objects Name"
+    value={value}
+    placeholder="Select Progress"
+    options={Option}
+    onchange={handleClick}></lightning-combobox>
+    <lightning-combobox 
+    label="fields Name" 
+    options={Option1}
+    onchange={handleClick1}></lightning-combobox>
+ <lightning-input type="text" name="ApiName" label="Api Name" onchange={handleClick2} value={Option2}></lightning-input>
+ <lightning-input type="text" name="Type" label="Data Type" onchange={handleClick3} value={Option3}></lightning-input>
+
+</template>

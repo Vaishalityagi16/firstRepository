@@ -1,0 +1,11 @@
+<template>
+<lightning-input type="text" name="Name" label="CityName" onchange={handleClick1}  ></lightning-input><br/>
+<lightning-button variant="brand" label=GetInfo title="Looks like a link" onclick={handleClick2}  class="slds-m-left_x-small"></lightning-button>&nbsp;
+<lightning-datatable
+    key-field="id"
+    data={data}
+    onrowaction ={handleRowAction}
+    onrowselection={getSelectedRecords}
+    columns={columns}>
+</lightning-datatable>
+</template>

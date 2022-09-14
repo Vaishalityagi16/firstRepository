@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>vaishali.tyagi@cloudanalogy.com</contactEmail>
+    <label>Test</label>
+    <oauthConfig>
+        <callbackUrl>https://cloudanalogycom40deved.lightning.force.com/services/authcallback/Connect_Org</callbackUrl>
+        <consumerKey>3MVG9pRzvMkjMb6n8wIVldT2c9fcFrLIqpMnwCyZnjGjALEoqyJ4vk1BgtU2XMLhYbs3Ljzu8ztOcVJhgZwIC</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Eclair</scopes>
+    </oauthConfig>
+</ConnectedApp>
